@@ -211,7 +211,8 @@
         const csvUrl = 'https://docs.google.com/spreadsheets/d/1zjwXDmD-RpmFBYouBmuAajkpevqYEdg5EA1qVTKN2Qg/pub?output=csv';
       
         function fetchAndUpdateLeaderboard() {
-          fetch(csvUrl)
+          const noCacheUrl = `${csvUrl}&_=${new Date().getTime()}`; // Add timestamp to URL
+    fetch(noCacheUrl)
             .then(response => {
               if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
