@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&family=Teko:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="e-commerce.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <nav class="navbar">
+       <img src="./Techastra2 24.png" height="70px" width="250px" alt="">
+        <div class="navbar-links">
+            <p class="navbar-link" onclick="document.getElementById('Home').scrollIntoView({ behavior: 'smooth' });"><a>HOME</a></p>
+            <p class="navbar-link" onclick="document.getElementById('Game').scrollIntoView({ behavior: 'smooth' });"><a>GAME</a></p>
+            <p class="navbar-link" onclick="document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' });"><a >CONTACT US</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="show()">
+            <i class="fa-solid fa-bars" style="cursor: pointer;"></i>
+        </div>
+    </nav>
+    <div class="side-navbar">
+        <p style="text-align: right;" id="one">
+            <i class="fa-solid fa-xmark" style="cursor: pointer; font-size:larger"></i><br>
+
+        </p>
+        <div class="sidenavbar-links">
+        <p class="sidenavbar-link" onclick="document.getElementById('Home').scrollIntoView({ behavior: 'smooth' });"><a >HOME</a></p>
+        <p class="sidenavbar-link" onclick="document.getElementById('Game').scrollIntoView({ behavior: 'smooth' });"><a >GAME</a></p>
+        <p class="sidenavbar-link" onclick="document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' });"><a href="#Contact">CONTACT US</a></p>
+    </div>
+    <h2>Techastra | Forensic Festa |</i>
+    </h2>
+    </div>
+
+   <div class="header" id="Home">
+    <div class="one" style="margin-top: 30px; padding-top: 20px; ">
+        <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Forensic Festa</h1>
+        <P>
+            <b>From Sherlock Holmes</b> to modern-day crime dramas, the pursuit of justice and the<br> exhilaration of solving complex puzzles never fades. Join us as we delve into the world <br>of investigation, where logic meets intuition, and every clue leads you closer to the truth. <br>Prepare to test your detective skills, challenge your intellect, and experience the ultimate <br>dopamine rush as you unravel mysteries <b> one piece at a time.</
+        </p>
+        <!-- <button>TRY NOW</button> -->
+    </div>
+    <div class="imgg">
+    <img src="./forensic festa.jpg" height="300" width="300" style="border-radius: 50%;"  class="header-image">
+    </div>
+   </div>
+
+   <!-- <div class="product-section">
+    <form action="" class="product-search">
+        <input type="text" id="search" placeholder="SEARCH">
+        <i id="o" class="fa-solid fa-magnifying-glass"></i>
+    </form>
+    <div class="products" id="products">
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?9" alt="">
+            <button>BUY NOW</button>
+            <p>white shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?10" alt="">
+            <button>BUY NOW</button>
+            <p>black shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?11" alt="">
+            <button>BUY NOW</button>
+            <p>t shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?12" alt="">
+            <button>BUY NOW</button>
+            <p>pant</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?13" alt="">
+            <button>BUY NOW</button>
+            <p>t shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?14" alt="">
+            <button>BUY NOW</button>
+            <p>pant</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?15" alt="">
+            <button>BUY NOW</button>
+            <p>white shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?16" alt="">
+            <button>BUY NOW</button>
+            <p>black shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?17" alt="">
+            <button>BUY NOW</button>
+            <p>shorts</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?18" alt="">
+            <button>BUY NOW</button>
+            <p>shorts</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?17" alt="">
+            <button>BUY NOW</button>
+            <p>sweatshirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?18" alt="">
+            <button>BUY NOW</button>
+            <p>sweatshirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?19" alt="">
+            <button>BUY NOW</button>
+            <p>shoe</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?20" alt="">
+            <button>BUY NOW</button>
+            <p>shoe</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?21" alt="">
+            <button>BUY NOW</button>
+            <p>shirt</p>
+        </div>
+        <div class="product-box">
+            <img src="https://source.unsplash.com/random/200x200/?fashion?22" alt="">
+            <button>BUY NOW</button>
+            <p>shirt</p>
+        </div>
+
+    </div>
+   </div> -->
+   <!-- <div class="card">
+    <p>ROUNDS DESCRIPTION</p>
+    <div class="tabs">
+        <div class="tab" data-round="1">ROUND 1</div>
+        <div class="tab" data-round="2">ROUND 2</div>
+        <div class="tab" data-round="3">ROUND 3</div>
+    </div>
+
+    <div class="rounds-description">
+        <div class="round" id="round-1">
+            <ul>
+                <li>Time duration (30 minutes).</li>
+                <li>Set of questions will be provided and to be answered within given time</li>
+            </ul>
+        </div>
+        <div class="round" id="round-2"><ul><li>Time duration (45 minutes)</li>
+        <li>Set of tasks related to cyber security (hash value, steganography, password cracking etc…) will be provided team who completes the task within given time will be selected to next round</li>
+        
+    </ul>
+        </div>
+        <div class="round" id="round-3">
+<ul>
+<li>Time duration (2 hours)</li>
+<li>Read the story provided carefully</li>
+<li>Team members have only 5 minutes to investigate inside the crime scene</li>
+<li>You will be given autopsy report and and Suspect Description</li>
+<li>Don’t touch or misplace the evidences</li>
+<li>Any 2 members from the team can raise only 3 questions to the Suspects and Eye Witness</li>
+<li>Your final report points should be related to the story and killer must be identified with reasons mentioned</li>
+</ul>
+        </div>
+    </div>
+</div> -->
+<div class="card">
+    <p>ROUNDS DESCRIPTION</p>
+    <div class="tabs">
+        <button class="tab active" data-round="1">ROUND 1</button>
+        <button class="tab" data-round="2">ROUND 2</button>
+        <button class="tab" data-round="3">ROUND 3</button>
+    </div>
+
+    <div class="rounds-description">
+        <div class="round active" id="round-1">
+            <ul>
+                <li>Time duration (30 minutes).</li>
+                <li>Set of questions will be provided and to be answered within the given time.</li>
+            </ul>
+        </div>
+        <div class="round" id="round-2">
+            <ul>
+                <li>Time duration (45 minutes).</li>
+                <li>Set of tasks related to cybersecurity (hash value, steganography, password cracking, etc.) will be provided. The team who completes the task within the given time will be selected for the next round.</li>
+            </ul>
+        </div>
+        <div class="round" id="round-3">
+            <ul>
+                <li>Time duration (2 hours).</li>
+                <li>Read the story provided carefully.</li>
+                <li>Team members have only 5 minutes to investigate inside the crime scene.</li>
+                <li>You will be given an autopsy report and suspect description.</li>
+                <li>Don’t touch or misplace the evidence.</li>
+                <li>Any 2 members from the team can raise only 3 questions to the suspects and eyewitness.</li>
+                <li>Your final report points should be related to the story, and the killer must be identified with reasons mentioned.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<h2>Let's Play Coders </h2>
+<div class="door-container" id="Game">
+    <div class="door-item" onclick="openModal(1)">
+        <a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+    </div>
+    <div class="door-item" onclick="openModal(2)">
+        <a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+    </div>
+    <div class="door-item" onclick="openModal(3)">
+    <a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+<div class="door-item" onclick="openModal(4)">
+    <a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+    <div class="door-item" onclick="openModal(5)">
+    <a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+<div class="door-item" onclick="openModal(6)">
+<a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+<div class="door-item" onclick="openModal(7)">
+<a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+<div class="door-item" onclick="openModal(8)">
+<a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+<div class="door-item" onclick="openModal(9)">
+<a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+<div class="door-item" onclick="openModal(10)">
+<a href="javascript:void(0);"><img src="door-final-transformed-1.jpg" alt="door">
+</a>
+</div>
+
+</div>
+<div id="modal-1" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(1)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+<div id="modal-2" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(2)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+<div id="modal-1" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(1)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+<div id="modal-2" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(2)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </div>
+</div>
+<div id="modal-3" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(3)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+<div id="modal-4" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(4)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+<div id="modal-5" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(5)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+<div id="modal-6" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(6)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+<div id="modal-7" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(7)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </div>
+</div>
+
+<div id="modal-8" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(8)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+<div id="modal-9" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(9)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+<div id="modal-10" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal(10)">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTmdCM7CcfM9nIi9YwtxyNfmJLXZ_h64mG5MZAOxXQKY8r0Q/viewform?embedded=true" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
+
+  
+   <div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+
+  </div> 
+
+
+
+
+  <!-- ________________________________script______________________ -->
+   <!-- <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.rounds-description').forEach(r => r.classList.remove('active'));
+    
+            this.classList.add('active');
+            document.getElementById(`round-${this.dataset.round}`).classList.add('active');
+        });
+    });
+    
+   </script> -->
+   <div class="contact-section" id="Contact">
+    <h1>Contact Us</h1>
+
+    <!-- Student Coordinators -->
+    <div class="category">
+        <h2>Staff Coordinators</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <img src="student1.jpg">
+                <p>Staff 1</p>
+                <p>ph:9708238965</p>
+            </div>
+            <div class="contact-card">
+                <img src="student2.jpg" >
+                <p>Staff 2</p>
+                <p>ph:8907689087</p>
+            </div>
+            <!-- <div class="contact-card">
+                <img src="student3.jpg" alt="Student 3">
+                <p>Student 3</p>
+                <p>Email: student3@example.com</p>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Teacher Coordinators -->
+    <div class="category">
+        <h2>Student Coordinators</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <img src="teacher1.jpg" >
+                <p>Student 1</p>
+                <p>ph:9780965467</p>
+            </div>
+            <div class="contact-card">
+                <img src="teacher2.jpg" >
+                <p>Student 2</p>
+                <p>Ph:9879879856</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Higher Authorities -->
+    <!-- <div class="category">
+        <h2>Higher Authorities</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <img src="authority1.jpg" alt="Authority 1">
+                <p>Authority 1</p>
+                <p>Email: authority1@example.com</p>
+            </div>
+            <div class="contact-card">
+                <img src="authority2.jpg" alt="Authority 2">
+                <p>Authority 2</p>
+                <p>Email: authority2@example.com</p>
+              
+        </div>
+        </div>
+
+    </div> -->
+    <img src="./forensic festa.jpg" height="50" width="50" style="border-radius: 50%;"  class="headi">
+    <p>Techastra || Forensic Feta  || 2024 .</p>
+    <p>Dr MGR University || Maduravoyal Chennai</p>
+</div>
+
+   <script>
+    var sidenav = document.querySelector(".side-navbar");
+var closeBtn = document.getElementById("one");
+var isSidebarOpen = false;
+
+// Function to toggle the sidebar
+function toggleSidebar() {
+    if (isSidebarOpen) {
+        sidenav.style.left = "-60%"; // Hide sidebar
+    } else {
+        sidenav.style.left = "0"; // Show sidebar
+    }
+    isSidebarOpen = !isSidebarOpen;
+}
+
+// Open sidebar
+closeBtn.addEventListener("click", toggleSidebar);
+
+// Close sidebar when clicking on sidebar links
+document.querySelectorAll('.sidenavbar-link a').forEach(link => {
+    link.addEventListener('click', function() {
+        if (isSidebarOpen) toggleSidebar();
+    });
+});
+
+// Close sidebar when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (isSidebarOpen && !sidenav.contains(event.target) && event.target !== closeBtn) {
+        toggleSidebar();
+    }
+});
+
+    // JavaScript to handle tab clicks and show the corresponding round description
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Remove 'active' class from all tabs and round descriptions
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.round').forEach(r => r.classList.remove('active'));
+    
+            // Add 'active' class to the clicked tab and corresponding round
+            this.classList.add('active');
+            document.getElementById(`round-${this.dataset.round}`).classList.add('active');
+        });
+    });
+    
+    function openModal(modalId) {
+        document.getElementById(`modal-${modalId}`).style.display = "block";
+    }
+    
+    function closeModal(modalId) {
+        document.getElementById(`modal-${modalId}`).style.display = "none";
+    }
+    
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        document.querySelectorAll('.modal').forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    }
+    // might deleted later
+    const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = 1;
+});
+
+document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = 0;
+});
+
+
+   </script>
+
+   <style>/* General Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #1d232c; /* Dark background */
+        color: #ffffff; /* Light text color */
+    }
+    
+    h1, h2, h3, h4 {
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto Slab', serif;
+        font-family: 'Teko', sans-serif;
+        color: #a17d5d; /* Copper-like accent color */
+    }
+    
+    /* Navbar */
+    .navbar {
+        background-color: #292e35; /* Slightly darker background */
+    }
+    
+    .navbar-links a {
+        color: #fff; ; /* Copper-like accent color */
+    }
+    
+    .navbar-links a:hover {
+        color: #ff9933;
+    }
+    
+    /* Header */
+    .header {
+        background-image: url('path/to/your/background-image.jpg'); /* Replace with your desired background image */
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Service */
+    .service-container-2 div {
+        background-color: #292e35;
+    }
+    
+    /* New Arrival */
+    .new-arrival-container {
+        background-color: #292e35;
+        border: 1px solid #333333; /* Subtle border */
+    }
+    
+    /* News */
+    .news input {
+        background-color: #292e35;
+        border: 1px solid #333333;
+    }
+    
+    .news button {
+        background-color: #a17d5d; /* Copper-like accent color */
+        color: #1d232c;
+    }
+    
+    /* Footer */
+    .footer {
+        background-color: #292e35;
+    }
+    
+    /* Product Section */
+    .product-search {
+        background-color: #292e35;
+        border: 1px solid #333333;
+    }
+    
+    .product-search input {
+        color: #ffffff;
+    }
+    
+    .product-box {
+        background-color: #292e35;
+        border: 1px solid #333333;
+    }
+    
+    /* Contact Section */
+    .contact-info {
+        background-color: #292e35;
+    }
+    
+    .contact {
+        background-color: #292e35;
+    }
+    
+    /* Additional Styles (adjust as needed) */
+    .card {
+        background-color: #292e35;
+        color: #ffffff;
+    }
+    
+    /* ... other elements and styles ... */</style>
+<script src="e-commerce.js"></script>
+    <script src="collection.js"></script>
+</body>
+</html>

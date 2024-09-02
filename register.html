@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #081b29;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #081b29;
+      --second-bg-color: #112e42;
+      --text-color: #ededed;
+      --main-color: #00abf0;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 5%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      transition: .3s;
+    }
+
+    .header.sticky {
+      background: var(--bg-color);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      font-weight: 600;
+    }
+
+    .logo img {
+      height: auto;
+      width: 150px;
+    }
+
+    .team-info {
+      display: flex;
+      left: 20%;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1000;
+      margin-left: 10px;
+    }
+
+    .team-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--main-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .team-name {
+      font-size: 0.8rem;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    .contact-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #00abf0;
+      width: 90%;
+      max-width: 350px;
+      height: 250px;
+      text-align: center;
+      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
+      padding: 15px;
+    }
+
+    .contact-card input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #2c2c2c;
+      color: #fff;
+    }
+
+    .contact-card button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-card button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 15px;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: red;
+      margin-top: 10px;
+    }
+
+    .reset-button {
+      margin-top: 10px;
+      background-color: #dc3545;
+    }
+
+    .reset-button:hover {
+      background-color: #c82333;
+    }
+
+    .contact-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #00abf0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header {
+        padding: 1rem 3%;
+      }
+
+      .logo img {
+        width: 140px;
+      }
+
+      .team-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+      }
+
+      .team-name {
+        font-size: 0.7rem;
+      }
+
+      .contact-card {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+      }
+
+      .contact-card input[type="text"] {
+        width: calc(100% - 20px);
+        font-size: 0.9rem;
+      }
+
+      .contact-card button {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .header {
+        padding: 1rem 2%;
+      }
+
+      .logo img {
+        width: 120px;
+      }
+
+      .team-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 0.7rem;
+      }
+
+      .team-name {
+        font-size: 0.6rem;
+      }
+
+      .contact-card {
+        width: 90%;
+        height: auto;
+        padding: 16px;
+      }
+
+      .contact-card input[type="text"] {
+        width: calc(100% - 20px);
+        font-size: 0.8rem;
+      }
+
+      .contact-card button {
+        padding: 6px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- header design -->
+  <header class="header">
+    <a href="https://techastra.drmgrdu.ac.in/" class="logo">
+      <img src="IMAGES/Techastra2.png" alt="Techastra Logo">
+    </a>
+    <div class="team-info">
+      <div class="team-circle" id="teamCircle">T</div>
+      <div class="team-name" id="teamNameDisplay">Team Name</div>
+    </div>
+    <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:1;"></span></div>
+  </header>
+
+  <!-- Registration Form -->
+  <div class="contact-card" id="registerForm">
+    <h2>Register Team Name</h2>
+    <input type="text" id="teamName" placeholder="Enter your team name" />
+    <button onclick="confirmRegistration()">Register</button>
+    <div class="message" id="registerMessage"></div>
+    <div class="disclaimer">*You cannot change the team name once registered.</div>
+  </div>
+
+  <!-- Registered Team Display -->
+  <div class="contact-card" id="teamDisplay" style="display: none;">
+    <h2>Registered Team Name</h2>
+    <p id="displayTeamName"></p>
+    <button class="reset-button" onclick="resetTeam()">Reset Team</button>
+  </div>
+
+  <script>
+    function confirmRegistration() {
+      const teamName = document.getElementById('teamName').value.trim();
+
+      if (teamName === '') {
+        document.getElementById('registerMessage').textContent = 'Please enter a team name.';
+        document.getElementById('registerMessage').className = 'error';
+        return;
+      }
+
+      // Show confirmation dialog
+      const confirmMsg = `Are you sure you want to register "${teamName}"? This name cannot be changed later.`;
+      if (confirm(confirmMsg)) {
+        registerTeam(teamName);
+      }
+    }
+
+    function registerTeam(teamName) {
+  // Check if a team name is already registered
+  if (localStorage.getItem('registeredTeam')) {
+    document.getElementById('registerMessage').textContent = 'Team name is already registered and cannot be changed.';
+    document.getElementById('registerMessage').className = 'error';
+    return;
+  }
+
+  // Save the team name in localStorage
+  localStorage.setItem('registeredTeam', teamName);
+  document.getElementById('registerMessage').textContent = 'Team registered successfully!';
+  document.getElementById('registerMessage').className = 'message';
+
+  // Redirect to the new page
+  window.location.href = "index.html";
+}
+
+    function displayRegisteredTeam() {
+      const registeredTeam = localStorage.getItem('registeredTeam');
+
+      if (registeredTeam) {
+        document.getElementById('registerForm').style.display = 'none';
+        document.getElementById('teamDisplay').style.display = 'block';
+        document.getElementById('displayTeamName').textContent = registeredTeam;
+        document.getElementById('teamCircle').textContent = registeredTeam.charAt(0).toUpperCase();
+        document.getElementById('teamNameDisplay').textContent = registeredTeam;
+      }
+    }
+
+    function resetTeam() {
+      // Remove the team name from localStorage
+      localStorage.removeItem('registeredTeam');
+      document.getElementById('registerMessage').textContent = 'Team registration reset. You can register a new team.';
+      document.getElementById('registerMessage').className = 'message';
+      document.getElementById('registerForm').style.display = 'block';
+      document.getElementById('teamDisplay').style.display = 'none';
+      document.getElementById('teamName').value = '';
+      document.getElementById('teamCircle').textContent = 'T';
+      document.getElementById('teamNameDisplay').textContent = 'Team Name';
+    }
+
+    // On page load, check if a team is already registered
+    window.onload = function() {
+      displayRegisteredTeam();
+    };
+  </script>
+</body>
+</html>

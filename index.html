@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forensic festa</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- header design -->
+    <header class="header">
+        <a href="https://techastra.drmgrdu.ac.in/" class="logo"><img src="IMAGES/Techastra2.png"><span class="animate" style="--i:1;"></span></a>
+
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Game</a>
+            <!-- <a href="#skills"></a> -->
+            <a href="#contact">Contact</a>
+
+            <span class="active-nav"></span>
+            <span class="animate" style="--i:1;"></span>
+        </nav>
+        <div class="team-info" onclick="showlogout()" style="cursor: pointer;">
+            <div class="team-circle" id="teamCircle">T</div>
+            <div class="team-name" id="teamNameDisplay"></div>
+            <div class="logout-option" id="logoutOption">
+                <button onclick="logout()">Logout</button>
+            </div>
+          </div>
+          <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:1;"></span></div>
+
+    </header>
+        
+
+    <!-- home section design -->
+    <section class="home show-animate" id="home">
+        <div class="home-content">
+            <h1><span>FORENSIC FESTA</span><span class="animate" style="--i:2;"></span></h1>
+            <div class="text-animate">
+                <h3>DECODE THE CODE</h3>
+                <span class="animate" style="--i:3;"></span>
+            </div>
+            <p>From Sherlock Holmes to modern-day crime dramas, the pursuit of justice and the exhilaration of 
+                solving complex puzzles never fades. Join us as we delve into the world of investigation, 
+                where logic meets intuition, and every clue leads you closer to the truth. Prepare to test 
+                your detective skills, challengeyour intellect, and experience the ultimate dopamine
+                rush as you unravel mysteries one piece at a time.
+                <span class="animate" style="--i:4;"></span>
+            </p>
+
+            <div class="btn-box">
+                <a href="#education" class="btn">PLAY</a>
+                <span class="animate" style="--i:5;"></span>
+            </div>
+        </div>
+
+        <div class="home-imgHover"></div>
+        <span class="animate home-img" style="--i:7;"></span>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <h2 class="heading">Round <span> Description</span><span class="animate scroll" style="--i:1;"></span></h2>
+
+        <div class="about-img">
+            <img src="images/forensic festa.jpg" alt="">
+            <span class="circle-spin"></span>
+           
+        </div>
+
+        <div class="about-content">
+            <h3>"Tech Minds, Quiz Time !"<span class="animate scroll" style="--i:3;"></span></h3>
+            <div class="container-rd">
+                <div class="tabs-rd">
+                    <button class="tab-button-rd" data-round="1">Round 1</button>
+                    <button class="tab-button-rd" data-round="2">Round 2</button>
+                    <button class="tab-button-rd" data-round="3">Round 3</button>
+                </div>
+                <div class="tab-content-rd">
+                    <div class="content-rd" id="round-1">
+                        <h2>Round 1 Rules</h2>
+                        <ul style="display: flex;flex-direction: column;align-items: baseline;text-align: initial;font-size: small;"><li>Time duration (30 minutes).</li>
+                        <li>Set of questions will be provided and to be answered within given time</li></ul>
+                      
+                    </div> 
+                    <div class="content-rd" id="round-2">
+                        <h2>Round 2 Rules</h2>
+                        <ul style="display: flex;flex-direction: column;align-items: baseline;text-align: initial;font-size: small;"><li>Time duration (45 minutes)</li>
+                        <li>Set of tasks related to cyber security (hash value, steganography, password cracking etc…) will be provided to the team who completes the task within given time will be selected to next round</li></ul>
+                    
+                    </div>
+                     <div class="content-rd" id="round-3">
+                        <h2>Round 3 Rules</h2>
+                        <ul style="display: flex;flex-direction: column;align-items: baseline;text-align: initial; font-size: small;">
+                            <li>Time duration (2 hours)</li>
+                            <li>Read the story provided carefully</li>
+                            <li>Only 5 minutes will be given for each team to investigate inside the crime scene</li><li>You will be given autopsy report and and Suspect Description</li>
+                            <li>Don’t touch or misplace the evidences</li>
+                            <li>Any 2 members from the team can raise only 3 questions to the Suspects and Eye Witness.</li>
+                            <li>Your final report points should be related to the story and killer must be identified with reasons mentioned.</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- education section design -->
+    <section class="education" id="education">
+        <h2 class="heading">Game <span>Mode</span></h2>
+
+        <div class="education-row">
+            <div class="education-column">
+                <h5 class="title">Be Carefull, What you wish for</h5>
+
+
+                    <div class="education-box">
+                        
+                        <div class="education-content" data-quiz="1" onclick="openModal(1)" >
+                            <div class="content" >
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 1</h3>
+                                <p>
+                                    "UNVEIL THE SECRET: DARE TO OPEN THE FIRST DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+                        <div class="education-content" data-quiz="2" onclick="openModal(2)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 2</h3>
+                                <p>
+                                    "UNVEIL THE SECRET: DARE TO OPEN THE SECOND DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content">
+                            <div class="content" data-quiz="3" onclick="openModal(3)">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 3</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE THIRD DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+                        <div class="education-content" data-quiz="4" onclick="openModal(4)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 4</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE FOURTH DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+                        <div class="education-content" data-quiz="5" onclick="openModal(5)"> 
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 5</h3>
+                                <p>"UNVEIL THE SECRET: DARE TO OPEN THE FIFTH DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+                        <div class="education-content" data-quiz="6" onclick="openModal(6)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 6</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE SIXTH DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content" data-quiz="7" onclick="openModal(7)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 7</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE SEVEN DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+
+                        <div class="education-content" data-quiz="8" onclick="openModal(8)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 8</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE EIGHTH DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+                        <div class="education-content" data-quiz="9" onclick="openModal(9)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 9</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE NINTH DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+                        <div class="education-content" data-quiz="10" onclick="openModal(10)">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i> techastra-2k24</div>
+                                <h3>Door - 10</h3>
+                                <p> "UNVEIL THE SECRET: DARE TO OPEN THE TENTH DOOR, FACE THE UNKNOWN, 
+                                    AND DISCOVER THE HIDDEN TRUTH THAT LIES BEYOND EACH MYSTERIOUS THRESHOLD. WILL YOU BRAVE IT?"</p>
+                            </div>
+                        </div>
+
+                        <span class="animate scroll" style="--i:1;"></span>
+                    </div>
+                    <div id="modal-1" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(1)">&times;</span>
+                            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdW-TXqt3bbpKS3qM2EAi0GxKmlu2a7wtQhzc3X2wgqWC0-XQ/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                        </div>
+                    </div>
+                    
+                    <div id="modal-2" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(2)">&times;</span>
+                            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfW5MAx8oCrxs-HnabbhKsSIHJQO3PXsW0TUICGR8Ghkov8Iw/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    
+                            -->
+                            </div>
+                    </div>
+                    <div id="modal-3" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(3)">&times;</span>
+                            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSedky4AXHZa077zx_ltunaeHleVSoc4lkJQ5gUr3AHWdR169A/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                        </div>
+                    </div>
+                    
+                    <div id="modal-4" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(4)">&times;</span>
+                            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpKhl3rdhZy8hI0yERMX3__iUDfMKJDtVD1R4NNNI1UIvz3A/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                        </div>
+                    </div>
+                    <div id="modal-5" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(5)">&times;</span>
+                            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaND8A4W_Cch197e_ZnKKa63WFVw3hLKzB4hhqE3Trbzz0PA/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                        </div>
+                    </div>
+
+                    <!-- <div id="modal-1" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(1)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKZUeLPbeAjFDuOaAi4Tcmv4B9cG4svKVPwbLK8C47YcOmFw/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    
+                    <div id="modal-2" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(2)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNMftMdHux0R1dakc5uljjZdu59kZrgYR1afC9IzqnIaVjaA/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </div>
+                    </div>
+                    <div id="modal-3" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(3)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfKZUeLPbeAjFDuOaAi4Tcmv4B9cG4svKVPwbLK8C47YcOmFw/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    
+                    <div id="modal-4" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(4)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNMftMdHux0R1dakc5uljjZdu59kZrgYR1afC9IzqnIaVjaA/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    <div id="modal-5" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(5)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLg6FESe1PRvN7NppL_4P-9zdlZq6K_Uh72UglJ7aOuseHTQ/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div> -->
+                    
+                    <div id="modal-6" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(6)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVMFosArEMNkWCp1Z4FuO1LUBe_Gbe4Psruiz4NQdavm8cLg/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    <div id="modal-7" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(7)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScLg6FESe1PRvN7NppL_4P-9zdlZq6K_Uh72UglJ7aOuseHTQ/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </div>
+                    </div>
+                    
+                    <div id="modal-8" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(8)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqiAybAzfEZArWKWd6T_FB4_FXF23w35_14p11ztA1rmI6Aw/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    <div id="modal-9" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(9)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7wQlvEz9Or4swYQ4nvdWzNtAtf1VHKASWWMeH3xhI2-sYGA/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    
+                    <div id="modal-10" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn" onclick="closeModal(10)">&times;</span>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScj_DahyXypySJongVoPgs6Htv88uZvviCHHy7fd-lja_oGbg/viewform?usp=sf_link" width="640" height="465" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
+                    
+            <!-- </div> -->
+        </div>
+    </section>
+
+     <!-- <section class="leaderboard"> 
+        <div style=" display: none;">
+            <h1 id="lead-start">Leaderboard</h1>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Team Name</th>
+                        <th>Sum Score</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+    -->
+    <!-- Include PapaParse library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us</span></h2>
+        <div class="category">
+            <h2>Staff Coordinators</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="card-image">
+                        <img src="IMAGES/staff-1.jfif" alt="Staff 1">
+                    </div>
+                    <div class="card-content">
+                        <h3>Dr. Mohan Doss</h3>
+                        <p>Additional HOD CFIS (CSE)</p>
+                    </div>
+                </div>
+                <!-- <div class="contact-card">
+                    <div class="card-image">
+                        <img src="IMAGES/home.jpg" alt="Staff 2">
+                    </div>
+                    <div class="card-content">
+                        <h3>Staff 2</h3>
+                        <p>ph: 8907689087</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        
+    
+        <!-- Teacher Coordinators -->
+        <div class="category">
+            <h2>Student Coordinators</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="card-image">
+                        <img src="IMAGES/senior-1.jpg" alt="Staff 1">
+                    </div>
+                    <div class="card-content">
+                        <h3>Harish Kumar</h3>
+                        <h3 style="color:azure" >harishkumar.cfis@gmail.com</h4>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="card-image">
+                        <img src="IMAGES/senior-2.jpg" alt="Staff 2">
+                    </div>
+                    <div class="card-content">
+                        <h3>punitha</h3>
+                        <h3 style="color:azure" >p.punitha.cfis@gmail.com</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email" required>
+                    <span class="focus"></span>
+                </div>
+
+                <span class="animate scroll" style="--i:3;"></span>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+
+                <span class="animate scroll" style="--i:5;"></span>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+
+                <span class="animate scroll" style="--i:7;"></span>
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+
+                <span class="animate scroll" style="--i:9;"></span>
+            </div> 
+        </form> -->
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <a href="https://techastra.drmgrdu.ac.in/" class="logo"><img src="IMAGES/Techastra2.png"><span class="animate" style="--i:1;"></span></a>
+        <!-- <span class="animate scroll" style="--i:1;"></span> -->
+        <div class="footer-text">
+            <p>techastra-2k24 | Dr MGR University Chennai | Department of CSE</p>
+
+            <!-- <span class="animate scroll" style="--i:1;"></span> -->
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+
+            <!-- <span class="animate scroll" style="--i:3;"></span> -->
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.tab-button-rd');
+        const contents = document.querySelectorAll('.content-rd');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const round = button.getAttribute('data-round');
+                
+                contents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                document.getElementById(`round-${round}`).style.display = 'block';
+            });
+        });
+
+        // Default to show round 1
+        document.querySelector('.tab-button-rd[data-round="1"]').click();
+    });
+
+
+</script>
+    
+</body>
+
+</html>
