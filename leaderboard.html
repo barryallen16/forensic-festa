@@ -130,7 +130,7 @@
 <body>
     <header class="header">
         <a href="https://techastra.drmgrdu.ac.in/" class="logo">
-          <img src="IMAGES/Techastra2.png" alt="Techastra Logo">
+            <img src="IMAGES/Techastra2.png" alt="Techastra Logo">
         </a>
     </header>
 
@@ -152,12 +152,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
     <script>
-        window.onload = function() {
-            fetchAndUpdateLeaderboard();
-        };
-      
         const csvUrl = 'https://docs.google.com/spreadsheets/d/1zjwXDmD-RpmFBYouBmuAajkpevqYEdg5EA1qVTKN2Qg/pub?output=csv';
-      
+
         function fetchAndUpdateLeaderboard() {
             const noCacheUrl = `${csvUrl}&_=${new Date().getTime()}`;
             fetch(noCacheUrl)
@@ -177,7 +173,7 @@
 
                             data.forEach(row => {
                                 const teamName = row['Enter your Team Name.'];
-                                const score = row['sum Score-int'];
+                                const score = row['sum '];
 
                                 if (teamName && !isNaN(score)) {
                                     if (!scores[teamName]) {
@@ -214,6 +210,11 @@
                 })
                 .catch(error => console.error('Error fetching data:', error));
         }
+
+        window.onload = function() {
+            fetchAndUpdateLeaderboard();
+            setInterval(fetchAndUpdateLeaderboard, 10000); // Refresh every 10 seconds
+        };
     </script>
 </body>
 </html>
